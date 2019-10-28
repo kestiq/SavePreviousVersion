@@ -1,7 +1,10 @@
 # SavePreviousVersion
 This is an Excel add-in that creates backup of a workbook before saving it.
 Tested on Windows 7 x64 & Excel 2012.
+
 Should work on Windows 7+ (both x32 and x64) with Excel 2012+.
+
+Default backup folder located at **%USERPROFILE%\Documents\ExcelPreviousFileVersions**. You can change this folder on Add-Ins ribbon tab.
 
 ## How to use:
 - Download [latest release](https://github.com/kestiq/SavePreviousVersion/releases/download/1.0.0.5/SavePreviousVersion_1.0.0.5.zip)
