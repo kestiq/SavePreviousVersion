@@ -17,17 +17,17 @@ namespace SavePreviousVersion
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             Application.WorkbookBeforeSave += new Excel.AppEvents_WorkbookBeforeSaveEventHandler(Application_WorkbookBeforeSave);
-            Application.StatusBar = "[SavePreviousVersion] Создание резервных копий файлов включено.";
+            Application.StatusBar = "[SavePreviousVersion] Backup enabled.";
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
-            Application.StatusBar = "[SavePreviousVersion] Создание резервных копий файлов отключено.";
+            Application.StatusBar = "[SavePreviousVersion] Backup disabled.";
         }
 
         void Application_WorkbookBeforeSave(Excel.Workbook Wb, bool SaveAsUI, ref bool Cancel)
         {
-            Application.StatusBar = "[SavePreviousVersion] Создание резервной копии файла...";
+            Application.StatusBar = "[SavePreviousVersion] Creating a backup before saving...";
 
             string basePath;
             string fileName;
@@ -49,11 +49,11 @@ namespace SavePreviousVersion
 
                 Wb.SaveCopyAs(Path.Combine(fileBasePath, $"{fileName}({DateTime.Now.ToString(DateFormat)}){fileExt}"));
 
-                Application.StatusBar = $"[SavePreviousVersion] Создана резервная копия текущего файла по пути: {fileBasePath}";
+                Application.StatusBar = $"[SavePreviousVersion] Backup created at: {fileBasePath}";
             }
             catch (Exception e)
             {
-                Application.StatusBar = $"[SavePreviousVersion] Не удалось создать резервную копию: {e.Message}";
+                Application.StatusBar = $"[SavePreviousVersion] Unable to create backup: {e.Message}";
             }
         }
 
