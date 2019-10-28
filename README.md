@@ -6,7 +6,7 @@ Should work on Windows 7+ (both x32 and x64) with Excel 2012+.
 ## How to use:
 - Download [latest release](https://github.com/kestiq/SavePreviousVersion/releases/download/1.0.0.5/SavePreviousVersion_1.0.0.5.zip)
 - Extract downloaded archive
-- Run **setup.exe** and follow installations instructions
+- Run **setup.exe** and follow installation instructions
 - Enable add-in in Excel preferences
 
 ## WARNING!
