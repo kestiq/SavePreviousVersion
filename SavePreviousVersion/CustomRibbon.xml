@@ -10,7 +10,7 @@
 
           <button
             id="BrowseButton"
-            label="Папка для сохранения резервных копий"
+            label="Backup folder"
             imageMso="Folder"
             enabled="true"
             visible="true"

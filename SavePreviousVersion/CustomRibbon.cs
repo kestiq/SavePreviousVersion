@@ -60,7 +60,7 @@ namespace SavePreviousVersion
             FolderBrowserDialog fbd = new FolderBrowserDialog()
             {
                 ShowNewFolderButton = true,
-                Description = "Выберите папку для сохранения резервных копий:"
+                Description = "Pick a backup folder:"
             };
 
             if (fbd.ShowDialog() == DialogResult.OK)
